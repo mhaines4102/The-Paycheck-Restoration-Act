@@ -69,6 +69,46 @@ If you want to engage with the proposal directly:
 - **Cite specific section numbers** when discussing the proposal so others
   can follow along.
 
+## Interactive model
+
+For people who want to play with the assumptions directly, this repository
+includes a self-contained interactive playground at
+[`models/index.html`](./models/index.html). Open the file in any modern
+browser (no server or installation required). The playground lets you adjust:
+
+- **Revenue target** (with a prominent Balanced Budget option at $7.20T,
+  versus the $5.20T current-law level that maintains the structural deficit)
+- **Shadow economy size** ($1.5T to $3.5T)
+- **Consumption substitution rate** (0% to 25% of household spending
+  shifting toward exempt categories)
+- **EITC and Child Tax Credit budget** (current $0.25T, expanded $0.41T,
+  or doubled $0.50T)
+- **Statutory pass-through enforcement** (50% to 100% of eliminated
+  employer payroll tax flowing to wages)
+- **Behavioral response scenario** (Pessimistic, Moderate, Optimistic)
+- **Real GDP baseline growth rate** (1% to 3%)
+
+The model recalculates in real time across three sections: required tax
+rate at the chosen revenue target, distributional impact across nine
+income levels, and 30-year economic projection.
+
+**Important finding the model surfaces directly:** Balancing the budget
+($7.20T target) requires a substantially higher consumption tax rate than
+the current-law-deficit version ($5.20T target). At default assumptions,
+the balanced budget rate is approximately 37 percent tax-exclusive, while
+the deficit-maintaining rate is approximately 26 percent. This is the
+honest cost of fully funding current spending levels through consumption
+tax alone. Whether the rate is acceptable depends on what the alternatives
+look like (current law also raises the same revenue at $5.20T but funds
+the rest through Treasury debt; balanced budget under current law would
+require similar increases through income, payroll, and corporate tax
+hikes).
+
+If you want to host the model online, the simplest approach is enabling
+GitHub Pages on this repository (Settings → Pages → Source → Deploy from
+branch → main → /models). The file then becomes available at
+`https://mhaines4102.github.io/ConsumptionTax/models/`.
+
 ## Document structure
 
 The full proposal (REPORT.md or the DOCX) is organized into nine sections
@@ -122,6 +162,8 @@ ConsumptionTax/
 ├── LICENSE                                      Unlicense (public domain)
 ├── REPORT.md                                    Full proposal (Markdown)
 ├── federal_consumption_tax_report.docx          Full proposal (Word format)
+├── models/
+│   └── index.html                               Interactive model playground
 └── images/
     ├── tax_comparison_chart.png                 Section 1 chart
     └── projection_chart.png                     Section 9 chart
