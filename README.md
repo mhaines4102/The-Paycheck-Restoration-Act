@@ -71,43 +71,191 @@ If you want to engage with the proposal directly:
 
 ## Interactive model
 
-For people who want to play with the assumptions directly, this repository
-includes a self-contained interactive playground at
-[`models/index.html`](./models/index.html). Open the file in any modern
-browser (no server or installation required). The playground lets you adjust:
+### Why this exists
 
-- **Revenue target** (with a prominent Balanced Budget option at $7.20T,
-  versus the $5.20T current-law level that maintains the structural deficit)
-- **Shadow economy size** ($1.5T to $3.5T)
-- **Consumption substitution rate** (0% to 25% of household spending
-  shifting toward exempt categories)
-- **EITC and Child Tax Credit budget** (current $0.25T, expanded $0.41T,
-  or doubled $0.50T)
-- **Statutory pass-through enforcement** (50% to 100% of eliminated
-  employer payroll tax flowing to wages)
-- **Behavioral response scenario** (Pessimistic, Moderate, Optimistic)
-- **Real GDP baseline growth rate** (1% to 3%)
+Tax policy proposals usually arrive as finished arguments. The numbers are
+either trusted or distrusted based on who produced them. Readers who want
+to know whether the math actually holds up have no good way to find out
+short of rebuilding the analysis themselves.
 
-The model recalculates in real time across three sections: required tax
-rate at the chosen revenue target, distributional impact across nine
-income levels, and 30-year economic projection.
+The interactive model in this repository takes the opposite approach. It
+exposes every assumption that drives the proposal's numbers and lets you
+change those assumptions and see what happens. If you doubt the shadow
+economy estimate, dial it down and watch the required rate climb. If you
+doubt that workers will get the full 15.3 percent payroll tax raise, drop
+the pass-through compliance to 50 percent and see the distributional
+impact get worse. If you think the supply-side response will be muted,
+switch the scenario to Pessimistic and watch the 30-year projection flatten.
 
-**Important finding the model surfaces directly:** Balancing the budget
-($7.20T target) requires a substantially higher consumption tax rate than
-the current-law-deficit version ($5.20T target). At default assumptions,
-the balanced budget rate is approximately 37 percent tax-exclusive, while
-the deficit-maintaining rate is approximately 26 percent. This is the
-honest cost of fully funding current spending levels through consumption
-tax alone. Whether the rate is acceptable depends on what the alternatives
-look like (current law also raises the same revenue at $5.20T but funds
-the rest through Treasury debt; balanced budget under current law would
-require similar increases through income, payroll, and corporate tax
-hikes).
+The model is not designed to make the proposal look good. It is designed
+to make the proposal testable. Several scenarios produce uncomfortable
+results. Several others produce results that look too generous to be real.
+Both kinds of finding are valuable. The point is to put the math in your
+hands rather than asking you to take it on faith.
 
-If you want to host the model online, the simplest approach is enabling
-GitHub Pages on this repository (Settings → Pages → Source → Deploy from
-branch → main → /models). The file then becomes available at
-`https://mhaines4102.github.io/ConsumptionTax/models/`.
+### Quick start
+
+The model is at [`models/index.html`](./models/index.html) in this
+repository. To use it:
+
+1. Download the file (or clone the whole repository)
+2. Open it in any modern browser by double-clicking the file
+3. Adjust the controls and watch the outputs update in real time
+
+No server, no installation, no account. Everything runs in your browser
+using vanilla JavaScript and one charting library loaded from a CDN. The
+file is approximately 33 KB.
+
+If you would rather use it without downloading, the repository owner can
+publish it as a website with one click using GitHub Pages (see the
+"Hosting it live" section below).
+
+### What the model contains
+
+The model has three connected sections that all recalculate together
+whenever you change any input.
+
+**Section 1: Required Consumption Tax Rate.** This is the headline
+number. Given the revenue target and base assumptions you choose, what
+consumption tax rate is required to collect enough to match the target?
+The default is **Balanced Budget at $7.20 trillion**, which is the
+design's actual goal (it matches federal spending of $7.00T plus a small
+surplus for debt paydown). You can switch to **$5.20 trillion** to match
+current-law collections (which leaves the same $1.80T deficit current law
+runs), or to **Custom** for any value between $4T and $9T.
+
+This section also lets you adjust:
+
+- **Shadow economy size** (currently estimated $2.5T, with academic ranges
+  from $1.5T to $3.5T). Higher shadow economy means more previously-untaxed
+  activity captured by consumption tax, which lowers the required rate.
+- **Consumption substitution rate** (default 10%, range 0% to 25%). This
+  models households shifting spending toward exempt categories over 5
+  years as they respond to the new tax. Higher substitution shrinks the
+  base and raises the required rate.
+
+**Section 2: Distributional Impact.** This section shows how tax burden
+falls across nine income deciles, comparing current law to the new design
+at the same revenue target. The chart displays both systems on a
+logarithmic scale so the full range from working class to ultra-wealthy
+is visible. The accompanying table shows annual savings per household at
+each income level.
+
+This section also lets you adjust:
+
+- **EITC and Child Tax Credit budget**. Three options: current law
+  ($0.25T), expanded ($0.41T as proposed in this document), or doubled
+  ($0.50T for maximum bottom-decile protection).
+- **Statutory pass-through enforcement** (default 100%, range 50% to
+  100%). This models how much of the eliminated employer payroll tax
+  actually flows to workers as wage increases versus being retained as
+  employer profit. Lower compliance shifts burden onto workers and away
+  from capital owners.
+
+**Section 3: 30-Year Economic Projection.** This section projects real
+GDP and federal revenue over three decades under your chosen behavioral
+response assumptions. It compares the new design's trajectory against the
+current-law baseline.
+
+This section lets you adjust:
+
+- **Behavioral response scenario** (Pessimistic, Moderate, Optimistic).
+  These correspond to the three scenarios documented in Section 9 of the
+  full report. The Pessimistic scenario reflects Stiglitz-style skepticism
+  about supply-side effects. The Optimistic reflects Mankiw-style
+  emphasis on capital formation. The Moderate sits at the consensus of
+  empirical literature.
+- **Real GDP baseline growth rate** (1% to 3%, default 2%). This is the
+  current-law trajectory the new design is compared against.
+
+### Scenarios worth trying
+
+These specific configurations illustrate key arguments and counterarguments
+in the proposal. Each one is meant to take less than 30 seconds to set up.
+
+**The bull case.** Set Revenue Target to $5.20T (current law collections).
+Set the behavioral response scenario to Optimistic. This shows the new
+design at its most favorable. Notice the rate falls to roughly 25 percent,
+every income decile saves substantial amounts, and 30-year GDP runs about
+68 percent above baseline. This is the case advocates would lead with.
+
+**The bear case.** Set Revenue Target to Balanced Budget ($7.20T). Set
+shadow economy to $1.5T (low end of estimates). Set substitution to 25
+percent (high end). Set pass-through compliance to 50 percent. Set
+behavioral scenario to Pessimistic. This is the simultaneous-failure
+worst case. The rate climbs to over 40 percent, distributional benefits
+shrink dramatically, and the 30-year growth dividend nearly disappears.
+The proposal still beats current law in this scenario, but only slightly.
+
+**The honest balanced budget case.** Set Revenue Target to Balanced Budget
+($7.20T) and leave everything else at defaults. The rate displays at
+approximately 37 percent. This is the actual cost of fully funding
+current spending through consumption tax alone. It is uncomfortably high
+compared to the $5.20T headline number that gets quoted most often.
+Reckoning with this rate, rather than hiding from it, is the productive
+discussion.
+
+**The shadow economy stress test.** Hold everything at defaults and slide
+the shadow economy size from $1.5T to $3.5T. Watch the required rate
+move and consider how confident you are in the estimate. The proposal's
+claim of $420B in annual shadow capture depends on this assumption.
+
+**The pass-through enforcement stress test.** Hold everything at defaults
+and slide the pass-through compliance from 100% down to 50%. Watch the
+bottom-decile burden grow as the worker benefit shrinks. This illustrates
+why the statutory enforcement provisions in Section 5 of the report
+matter operationally.
+
+**The compounding growth case.** In Section 3, switch between Pessimistic,
+Moderate, and Optimistic scenarios and watch the year-30 GDP gain change.
+At Moderate the gain is around 38 percent. At Optimistic it is around 68
+percent. The difference is roughly $20 trillion in real GDP, which
+illustrates why the supply-side response assumptions are the highest-impact
+uncertainties in the design.
+
+### What the model can and cannot tell you
+
+The model is honest about its limitations. It cannot tell you:
+
+- Whether the constitutional amendment to repeal the 16th Amendment will
+  actually pass
+- Whether the Federal Reserve will respond appropriately during transition
+- Whether enforcement of statutory pass-through will be effective in
+  practice
+- Whether real labor supply elasticities and investment elasticities will
+  match empirical estimates
+- Whether political consensus around the design can be built and maintained
+
+It can tell you:
+
+- What rate is required given any combination of assumptions
+- How burden distributes across income levels at that rate
+- How sensitive the bottom-line economics are to each assumption
+- Where the design is robust (insensitive to assumption changes) and
+  where it is fragile (highly sensitive to assumption changes)
+
+If a scenario you set produces results you find implausible, that is
+useful information. It tells you something about either the model's
+implicit assumptions or about which combinations of inputs are realistic.
+Open an issue describing what scenario you tried and what result surprised
+you.
+
+### Hosting it live
+
+If you want to make the model accessible without requiring people to
+download files, GitHub Pages publishes the entire repository as a static
+website with no setup work. To enable:
+
+1. Go to the repository's Settings on GitHub
+2. Click "Pages" in the left sidebar
+3. Under Source, select "Deploy from a branch"
+4. Choose branch `main` and folder `/ (root)`
+5. Save
+
+The model becomes available within a minute or two at
+`https://mhaines4102.github.io/ConsumptionTax/models/`. You can link
+people directly to that URL. The model loads instantly, works on phones
+and tablets as well as desktops, and requires no further infrastructure.
 
 ## Document structure
 
