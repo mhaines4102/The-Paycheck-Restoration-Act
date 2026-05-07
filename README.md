@@ -68,6 +68,14 @@ If you want to engage with the proposal directly:
   you would like the original author to see your version.
 - **Cite specific section numbers** when discussing the proposal so others
   can follow along.
+- **Use an AI to analyze the proposal rigorously**, with the analysis
+  framework provided in [`LLM_CONTEXT.md`](./LLM_CONTEXT.md). This file
+  is designed to be loaded into ChatGPT, Claude, Gemini, or any other
+  large language model alongside the proposal. It establishes the
+  analytical principles, empirical anchors, and consistency rules that
+  rigorous tax analysis requires. The framework anticipates common
+  reflexive responses from both ideological directions and explains what
+  rigor demands of each. See the LLM analysis section below for details.
 
 ## Interactive model
 
@@ -257,6 +265,103 @@ The model becomes available within a minute or two at
 people directly to that URL. The model loads instantly, works on phones
 and tablets as well as desktops, and requires no further infrastructure.
 
+## Analyzing the proposal with an LLM
+
+### Why this exists
+
+Large language models like ChatGPT, Claude, and Gemini are powerful tools
+for analyzing complex policy proposals. They can read the full proposal
+in seconds, surface specific arguments, identify weaknesses, and engage
+in substantive back-and-forth discussion in ways that no static document
+can match.
+
+There is a problem, though: LLMs are trained on internet text, which
+overrepresents popular framings of tax policy from both ideological
+directions. When asked about consumption tax, the typical LLM response
+recycles standard talking points (regressive, anti-poor, will be passed
+through to consumers, FAIR Tax already failed) without engaging the
+specific design under review. The asymmetric application of economic
+principles is particularly common: an LLM might accept that workers bear
+all of payroll tax through reduced wages while simultaneously rejecting
+that workers benefit from corporate tax elimination through increased
+wages. Same incidence logic, applied inconsistently.
+
+The file [`LLM_CONTEXT.md`](./LLM_CONTEXT.md) is designed to head off this
+failure mode. It establishes:
+
+- The analytical principles rigorous tax analysis requires
+- The empirical anchors (with citations) that quantitative claims should
+  be measured against
+- The consistency rules that prevent asymmetric application of incidence
+  and behavioral elasticities
+- The common reflexive responses from both ideological directions, and
+  what rigor demands of each
+
+The goal is not to make the LLM agree with the proposal. The goal is to
+make the LLM do real analytical work instead of pattern-matching against
+familiar framings. Critiques that survive rigorous analysis are valuable.
+Critiques that depend on inconsistent standards are not.
+
+### Quick start
+
+To analyze the proposal with any modern LLM:
+
+1. Open a fresh chat session with your LLM of choice (ChatGPT, Claude,
+   Gemini, or others)
+2. Paste or attach `LLM_CONTEXT.md` first, with a message like "Please
+   read this analysis framework. I will then load the proposal documents
+   and ask you to analyze them"
+3. Paste or attach `REPORT.md` (the full proposal) and optionally the
+   contents of `models/index.html` if you want the LLM to understand
+   the calculator
+4. Ask whatever you want to know
+
+### Productive question patterns
+
+The LLM gives sharper answers to specific questions than to general ones.
+Examples of question patterns that produce useful analysis:
+
+- "Identify the strongest analytical critique of [specific claim in
+  Section X]."
+- "Where does the proposal's math seem most fragile? What assumptions
+  are carrying the most weight?"
+- "How would the proposal compare to [alternative]? Use the same revenue
+  level for both."
+- "Walk me through what would happen if [specific assumption fails]."
+- "Explain why [popular critique] does or does not apply to this
+  specific design."
+- "Compare this proposal to FAIR Tax (HR 25). What are the substantive
+  design differences?"
+- "If you had to find a flaw in the distributional analysis, what would
+  it be? Be specific."
+
+### Less productive question patterns
+
+These produce generic responses that don't engage the proposal:
+
+- "Is this proposal good?" (No verdict to render)
+- "Is this conservative or liberal?" (The design cuts across this
+  grouping)
+- "Will this work?" (Depends on what "work" means and many factors
+  outside the design)
+- "What do economists think?" (Economists disagree; specific empirical
+  claims are testable)
+
+### What you can do with the analysis
+
+Once the LLM has produced analysis, you can:
+
+- Open issues on this repository citing specific points from the analysis
+- Submit pull requests with corrections to the proposal based on the
+  analysis
+- Use the analysis as a starting point for your own deeper investigation
+- Test the analysis against other LLMs (different models will sometimes
+  produce different critiques, which is itself useful information)
+
+The LLM_CONTEXT.md file is itself open to revision. If you find its
+framing biased in either direction, or if you find empirical anchors
+that should be added or corrected, that is a valuable pull request.
+
 ## Document structure
 
 The full proposal (REPORT.md or the DOCX) is organized into nine sections
@@ -310,6 +415,7 @@ ConsumptionTax/
 ├── LICENSE                                      Unlicense (public domain)
 ├── REPORT.md                                    Full proposal (Markdown)
 ├── federal_consumption_tax_report.docx          Full proposal (Word format)
+├── LLM_CONTEXT.md                               Analysis framework for LLMs
 ├── models/
 │   └── index.html                               Interactive model playground
 └── images/
