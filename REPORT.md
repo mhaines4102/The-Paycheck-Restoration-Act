@@ -1,4 +1,4 @@
-# A Federal Consumption Tax
+# The Paycheck Restoration Act
 
 *Replacing Individual Income, Payroll, and Corporate Income Taxes*
 
@@ -8,7 +8,7 @@ Prepared 2026
 
 ## 1. Across-the-Board Individual Savings
 
-Under the proposed federal consumption tax design, every household income level pays less in annual federal taxes than under current law, while the federal government collects the same total revenue of $5.20 trillion. This is not an optical illusion; it is the result of three structural shifts that bring previously untaxed economic activity into the tax base. Those three shifts (capture of the shadow economy, a broader tax base on business transactions, and a new tax on foreign investment returns) together generate roughly $1 trillion in revenue that current income, payroll, and corporate taxes cannot reach.
+Under the Paycheck Restoration Act, every household income level pays less in annual federal taxes than under current law, while the federal government collects the same total revenue of $5.20 trillion. This is not an optical illusion; it is the result of three structural shifts that bring previously untaxed economic activity into the tax base. Those three shifts (capture of the shadow economy, a broader tax base on business transactions, and a new tax on foreign investment returns) together generate roughly $1 trillion in revenue that current income, payroll, and corporate taxes cannot reach.
 
 The chart below compares the actual annual federal tax burden borne by households at each income level under both systems. The gray solid line represents current law (the combined burden of individual income tax, payroll tax, corporate income tax incidence, tariffs, excise taxes, and estate tax). The purple dashed line represents the new design (consumption tax incidence plus retained tariffs, excise, estate tax, short-term capital gains, foreign investment return tax, and Federal Reserve remittances). Both axes are logarithmic to show the full income spectrum from working class to ultra-wealthy.
 
@@ -60,7 +60,7 @@ This activity has one consistent feature: the people earning the income spend a 
 
 Under current law, these flows reach the formal economy without ever passing through the tax system. The cash that bought a $35,000 truck from a shadow earner pays no payroll tax, no income tax, no corporate tax. The dealer reports the sale (so it appears in macro Bureau of Economic Analysis consumption data) but the buyer never appears in any Internal Revenue Service file. This is a permanent gap in current federal tax architecture.
 
-Under the proposed consumption tax, this gap closes. When the shadow earner buys a $35,000 truck at a dealership, the dealership collects the consumption tax at point of sale and remits it to the state, which remits it to the federal government. The buyer does not need to file anything. The dealer collects regardless of how the buyer earned the money. The system is enforcement-blind to income source.
+Under the Paycheck Restoration Act, this gap closes. When the shadow earner buys a $35,000 truck at a dealership, the dealership collects the consumption tax at point of sale and remits it to the state, which remits it to the federal government. The buyer does not need to file anything. The dealer collects regardless of how the buyer earned the money. The system is enforcement-blind to income source.
 
 ### Estimated annual revenue from shadow economy capture
 
@@ -172,7 +172,7 @@ Consider a manufacturer evaluating a $500,000 piece of automation equipment that
 
 The cumulative effect is that current law systematically subsidizes labor replacement. A business can replace workers with equipment that produces the same output and the same quality and still come out substantially ahead through pure tax and regulatory arbitrage. The displaced workers are not made more productive; they are simply moved out of the formal workforce.
 
-Under the new consumption tax design, this incentive structure changes fundamentally. The same $500,000 equipment purchase now carries approximately $125,000 in consumption tax (at a 25.1 percent rate). There is no corporate income tax to deduct against. The eliminated payroll tax savings disappear because there is no payroll tax. The business still saves on benefits and regulatory overhead, but the magnitude of the saving is no longer subsidized by the federal tax system. The economic decision shifts toward neutral on tax grounds.
+Under the Paycheck Restoration Act, this incentive structure changes fundamentally. The same $500,000 equipment purchase now carries approximately $125,000 in consumption tax (at a 25.1 percent rate). There is no corporate income tax to deduct against. The eliminated payroll tax savings disappear because there is no payroll tax. The business still saves on benefits and regulatory overhead, but the magnitude of the saving is no longer subsidized by the federal tax system. The economic decision shifts toward neutral on tax grounds.
 
 Where automation genuinely improves output or quality, businesses will still adopt it. That is appropriate. Where automation merely shifts the same output from human workers to machines without genuine improvement, the new design removes the artificial subsidy that drives the substitution. American workers compete on a more level playing field with the equipment that might replace them, because the equipment no longer arrives pre-subsidized through the corporate tax code.
 
@@ -436,7 +436,7 @@ The American economy bears a substantial hidden cost from the complexity of the 
 
 This $718 billion is an external tax on businesses and taxpayers alike. It is real money that does not produce goods or services, does not feed families, does not fund infrastructure, and does not advance any productive purpose. It exists solely because the current federal tax code is complex enough to require an entire industry of professionals to navigate it. Every hour an accountant spends on a corporate tax return is an hour they cannot spend on cost analysis, financial planning, or productive operations support. Every dollar a small business pays its CPA is a dollar that does not go toward equipment, wages, or expansion.
 
-Under the new consumption tax design, this burden largely disappears. Households face no tax preparation requirement at all (the consumption tax is collected at point of sale, automatically, by the retailer). Businesses face a much simpler compliance requirement: collect consumption tax on their sales, remit to the state, and submit a quarterly summary report. The complex apparatus of corporate income tax (transfer pricing studies, deferred tax assets and liabilities, foreign tax credit computations, R&D credit qualification, accelerated depreciation schedules, partnership allocations) becomes irrelevant and is eliminated.
+Under the Paycheck Restoration Act, this burden largely disappears. Households face no tax preparation requirement at all (the consumption tax is collected at point of sale, automatically, by the retailer). Businesses face a much simpler compliance requirement: collect consumption tax on their sales, remit to the state, and submit a quarterly summary report. The complex apparatus of corporate income tax (transfer pricing studies, deferred tax assets and liabilities, foreign tax credit computations, R&D credit qualification, accelerated depreciation schedules, partnership allocations) becomes irrelevant and is eliminated.
 
 Realistic estimates suggest 80 to 90 percent of current tax compliance costs would be eliminated under the new design. The IRS shrinks from approximately 90,000 employees to roughly 25,000 to 30,000 (focused on auditing state collections, large interstate businesses, and fraud investigation). Tax preparation chains largely disappear. Corporate tax departments shrink dramatically. Tax-focused legal practices contract. An estimated $575 to $645 billion in annual compliance costs returns to productive use.
 

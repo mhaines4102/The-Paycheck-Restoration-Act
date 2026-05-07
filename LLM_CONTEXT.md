@@ -1,10 +1,10 @@
-# Federal Consumption Tax Proposal: Analysis Framework for LLMs
+# The Paycheck Restoration Act: Analysis Framework for LLMs
 
 ## Purpose of this document
 
 This document is intended to be loaded as context into a large language model
 (ChatGPT, Claude, Gemini, or similar) before asking the model to analyze the
-federal consumption tax proposal in this repository. Its goal is to establish
+Paycheck Restoration Act proposal in this repository. Its goal is to establish
 the analytical framework, empirical anchors, and consistency rules that should
 guide the analysis, regardless of which conclusions the analysis ultimately
 reaches.

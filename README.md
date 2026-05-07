@@ -1,4 +1,4 @@
-# Paycheck Restoration Act: Proposal and Public Comment
+# The Paycheck Restoration Act
 
 This repository contains a worked-out proposal for replacing the US federal
 income tax, payroll tax, and corporate income tax with a single federal
@@ -6,7 +6,7 @@ consumption tax. It is published here for **public comment, criticism, and
 collaborative refinement.**
 
 The full proposal is in [`REPORT.md`](./REPORT.md) (rendered inline on
-GitHub) or in [`federal_consumption_tax_report.docx`](./federal_consumption_tax_report.docx)
+GitHub) or in [`paycheck_restoration_act_report.docx`](./paycheck_restoration_act_report.docx)
 (formatted for printing or sharing as a document).
 
 ## What this is
@@ -410,11 +410,11 @@ new design, with reconciliation of household-level burden to total revenue.
 ## Repository contents
 
 ```
-ConsumptionTax/
+The-Paycheck-Restoration-Act/
 ├── README.md                                    This file
 ├── LICENSE                                      Unlicense (public domain)
 ├── REPORT.md                                    Full proposal (Markdown)
-├── federal_consumption_tax_report.docx          Full proposal (Word format)
+├── paycheck_restoration_act_report.docx          Full proposal (Word format)
 ├── LLM_CONTEXT.md                               Analysis framework for LLMs
 ├── models/
 │   └── index.html                               Interactive model playground
