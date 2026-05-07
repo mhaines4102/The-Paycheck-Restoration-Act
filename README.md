@@ -1,4 +1,4 @@
-# A Federal Consumption Tax: Proposal and Public Comment
+# Paycheck Restoration Act: Proposal and Public Comment
 
 This repository contains a worked-out proposal for replacing the US federal
 income tax, payroll tax, and corporate income tax with a single federal
